@@ -9,4 +9,15 @@ export const INCREMENT_NUM = "INCREMENT_NUM";
 export const DECREMENT_NUM = "DECREMENT_NUM";
 export const RESET = "RESET";
 
+export const FETCH_LOCATIONS = "FETCH_LOCATIONS";
+export const RECEIVE_LOCATIONS = "RECEIVE_LOCATIONS";
+
+export const SELECT_LOCATION = "SELECT_LOCATION";
+
+export const FETCH_WEATHER = "FETCH_WEATHER";
+export const RECEIVE_WEATHER = "RECEIVE_WEATHER";
+
+export const SELECT_THEME = "SELECT_THEME";
+
+export const TEST_ACTION = "TEST_ACTION";
 /* eslint-enable */

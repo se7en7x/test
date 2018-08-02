@@ -2,9 +2,9 @@
 import { combineReducers } from "redux";
 
 import count from "./counter";
-// import secondCounter from './exampleReducer';
+import theme from "./theme";
+import currentLocation from "./currentLocation";
+import searchTerm from "./searchTerm";
+import searchResult from "./searchResult";
 
-export default combineReducers({ count });
-
-// Example for combining multiple reducers:
-// export default combineReducers({ count, secondCounter });
+export default combineReducers({ count, theme, currentLocation,searchTerm,searchResult});

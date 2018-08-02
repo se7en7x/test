@@ -32,12 +32,19 @@ module.exports = {
   },
   devServer: {
     contentBase: "./public/",
-    watchContentBase: true
+    watchContentBase: true,
+     proxy: {
+       '/api': {
+        target: 'https://www.metaweather.com',
+        secure: false,
+        changeOrigin: true
+      }
+    }
   },
   plugins: [
     new ExtractTextPlugin("bundle.css"),
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
+      "process.env.NODE_ENV": JSON.stringify("dev")
     }),
     new webpack.optimize.UglifyJsPlugin()
   ]
