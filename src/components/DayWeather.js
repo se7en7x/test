@@ -33,19 +33,18 @@ class DayWeather extends Component {
 		const { currentLocation } = this.props;
 
 		const options = currentLocation.consolidated_weather.map(r => (
-			<li key={r.id}>
+			<li key={r.id} className="weatherItem">
 				<ul className="column">
 					<li class={this.weatherIco(r.weather_state_abbr)} />
-					<li>
+					<li className="temp">
 						<span>{this.tempFormat(r.min_temp)}
 						</span>
 						<span>
 							{this.tempFormat(r.max_temp)}
 						</span>
 					</li>
-					<li>{r.applicable_date}</li>
-					<li>{moment(r.applicable_date, "YYYY-MM-DD").format("ddd")}</li>
-					<li>{r.weather_state_name}</li>
+					<li className="date">{moment(r.applicable_date, "YYYY-MM-DD").format("ddd")}</li>
+					<li className="state">{r.weather_state_name}</li>
 				</ul>
 			</li>
 		));

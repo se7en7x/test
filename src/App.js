@@ -10,7 +10,7 @@ class App extends Component {
 	render() {
 		const { theme } = this.props;
 		return (
-			<div class={theme} >
+			<div className="main" class={theme} >
 				<Menu />
 				<DayWeather />
 				<ThemeSelector />
