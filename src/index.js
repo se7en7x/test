@@ -10,8 +10,7 @@ import App from "./App";
 // import store from "./store";
 import configureStore from "./configureStore";
 const store = configureStore();
-store.dispatch(fetchLoctions("phi"));//test1
-store.dispatch(selectLocation(2471217,"feifei"));//test2
+store.dispatch(selectLocation(2471217,"New York"));//test2
 // By using <Provider />, the store will be made available for all the components in your application.
 
 render(
