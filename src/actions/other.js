@@ -45,7 +45,7 @@ export const selectLocation = (woeid,city) => {
 		dispatch(receiveLoctions([]));
 		dispatch(fetchWeather(woeid));
 	};
-}
+};
 
 export const fetchWeather = woeid => {
 	return dispatch => {
