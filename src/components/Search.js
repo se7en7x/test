@@ -63,7 +63,6 @@ class Search extends Component {
 Search.propTypes = {
 	fetchLoctions: PropTypes.func.isRequired,
 	selectLocation: PropTypes.func.isRequired,
-
 	searchTerm: PropTypes.string
 };
 

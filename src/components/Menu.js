@@ -12,8 +12,7 @@ class Menu extends Component {
 				<button
 					onClick={() => {
 						toggleMenu();
-					}}
-				>
+					}}>
 					Menu
 				</button>
 				<Search />

@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.themeSelector{
+	width:90px;
+	span{
+		 display: inline-block; 
+		width:30px;
+		height:30px;
+	}
+}

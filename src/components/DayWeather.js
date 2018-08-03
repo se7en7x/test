@@ -22,8 +22,8 @@ class DayWeather extends Component {
 		return "wi " + iconMapping[weatherStateAbbr];
 	};
 
-	tempFormat = f_temp => {
-	return	convert(f_temp)
+	tempFormat = fTemp => {
+	return	convert(fTemp)
 		.from("C")
 		.to("F")
 		.toFixed(0);

@@ -1,17 +1,14 @@
-// import { INCREMENT_NUM, DECREMENT_NUM, RESET } from "../constants/ActionTypes";
+import { SELECT_THEME } from "../constants/ActionTypes";
 
-const defaultTheme = {
-    "color": "blue"
-};
+const defaultTheme= {
+  "selectedTheme": "theme0",
+  "allThemes": ["theme0","theme1","theme2","theme3","theme4","theme5","theme6","theme7","theme8"]
+}
 
 export default function reducer(state = defaultTheme , action) {
   switch (action.type) {
-  // case INCREMENT_NUM: 
-  //   return state + 1;
-  // case DECREMENT_NUM:
-  //   return state - 1;
-  // case RESET:
-  //   return state = action.payload;
+    case SELECT_THEME:
+     return Object.assign({}, state, {selectedTheme:action.theme});
   }
 
   return state;

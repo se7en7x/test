@@ -75,6 +75,15 @@ export const receiveWeather = location => {
 };
 
 
+export const selectTheme = theme => {
+	return dispatch => {
+		return dispatch({
+			"type": actionTypes.SELECT_THEME,
+			theme
+		});
+	};
+};
+
 export const testAction = (testMsg) => ({
   "type": actionTypes.TEST_ACTION,
   testMsg
