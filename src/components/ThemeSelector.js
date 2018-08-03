@@ -6,17 +6,31 @@ import Search from "../containers/Search";
 class ThemeSelector extends Component {
 	render() {
 		const { themes, selectedTheme } = this.props;
-				console.log("themes:")
-		console.log(themes)
+		
 
-		const options = themes.map(theme => (
-			<span key={theme} class={theme} onClick={e =>{this.props.selectTheme(theme)}}>
-			</span>
-		));
+		const createTable = (themes) => {
+			
+			let table=[];
+			for(let i=0; i<3; i++){
+				let childern = [];
+				themes[i].forEach( (element)=>{
+					childern.push(
+						<td className={element} onClick={e =>{this.props.selectTheme(element)}}></td>)
+				})
+
+				table.push(<tr>{childern}</tr>)
+			}
+			return table;
+			
+		};
 
 		return (
-			<div class="themeSelector">
-			{options}
+			<div className="theme">
+				<h3>Theme</h3>
+				<div class="themeSelector">
+					
+					<table>{createTable(themes)}</table>
+				</div>
 			</div>
 		);
 	}
