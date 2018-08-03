@@ -43,10 +43,16 @@
 		margin: auto;
 	    width: 70%;
 	    position: relative;
-		td{
-			width: 57px;
-    		height: 45px;
-
+	    div{
+	    	border-radius: 20px;
+    		overflow: hidden;
+		    table{
+				border-radius: 25px;
+				td{
+				width: 57px;
+	    		height: 45px;
+				}
+			}
 		}
 	}
 	h3{

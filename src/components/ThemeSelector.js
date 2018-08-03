@@ -28,8 +28,9 @@ class ThemeSelector extends Component {
 			<div className="theme">
 				<h3>Theme</h3>
 				<div class="themeSelector">
-					
+					<div>
 					<table>{createTable(themes)}</table>
+					</div>
 				</div>
 			</div>
 		);
