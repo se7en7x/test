@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import convert from "convert-units";
+import moment from "moment";
 
 class DayWeather extends Component {
+
 	weatherIco = weatherStateAbbr => {
 		let iconMapping = {
 			sn: "wi-day-snow",
@@ -20,6 +22,13 @@ class DayWeather extends Component {
 		return "wi " + iconMapping[weatherStateAbbr];
 	};
 
+	tempFormat = f_temp => {
+	return	convert(f_temp)
+		.from("C")
+		.to("F")
+		.toFixed(0);
+	};
+
 	render() {
 		const { currentLocation } = this.props;
 
@@ -28,20 +37,14 @@ class DayWeather extends Component {
 				<ul className="column">
 					<li class={this.weatherIco(r.weather_state_abbr)} />
 					<li>
-						<span>
-							{convert(r.min_temp)
-								.from("C")
-								.to("F")
-								.toFixed(0)}
+						<span>{this.tempFormat(r.min_temp)}
 						</span>
 						<span>
-							{convert(r.max_temp)
-								.from("C")
-								.to("F")
-								.toFixed(0)}
+							{this.tempFormat(r.max_temp)}
 						</span>
 					</li>
 					<li>{r.applicable_date}</li>
+					<li>{moment(r.applicable_date, "YYYY-MM-DD").format("ddd")}</li>
 					<li>{r.weather_state_name}</li>
 				</ul>
 			</li>

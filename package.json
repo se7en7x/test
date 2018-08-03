@@ -7,6 +7,7 @@
     "convert-units": "^2.3.4",
     "express": "^4.16.3",
     "meyer-reset-sass": "^1.0.1",
+    "moment": "^2.22.2",
     "normalize-scss": "7.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
