@@ -16,7 +16,7 @@ class Menu extends Component {
 					}}
 				>
 				</i>
-				<i className="closeBtn far fa-times"
+				<i className="closeBtn fas fa-times"
 					onClick={() => {
 						toggleMenu();
 					}}
