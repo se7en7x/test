@@ -4,14 +4,17 @@ import PropTypes from "prop-types";
 class LocationInfo extends Component {
 	render() {
 		const { city, state } = this.props;
-
-		return (
-			<div>
-			{city},{state}
-			</div>
-		);
+		if (city || state) {
+			return (
+				<div>
+					{city},{state}
+				</div>
+			);
+		} else {
+			return "";
+		}
 	}
-};
+}
 
 LocationInfo.propTypes = {
 	city: PropTypes.string,
