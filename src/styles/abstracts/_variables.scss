@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'PT Sans','Merriweather', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+//colors
+$background-color:#FFF;
+
+/// Copy text color
+/// @type Color
+$text-color: #4A4A4A !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #FFF !default;
+
+/// Light 
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+///UI ELEMENT COLOR
+$ui-normal: #E4C3A3 !default;
+$ui-horver: #EECBA9 !default;
+$ui-explore: #CBA886 !default;
+$ui-bcolor: #FAF8F6!default;
+$ui-9b: #9B9B9B!default;
+$ui-mobilenav-color: #D6C2B0!default;
+
+
+$fontP: 'PT Sans', sans-serif;
+$fontM: 'Merriweather', serif;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1440px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+// $breakpoints: (
+//   'small': 320px,
+//   'medium': 768px,
+//   'large': 1024px,
+// ) !default;
+//moved to bootstarp
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+$s3base-url: 'https://s3.amazonaws.com/cloverweb/assets/' !default;;

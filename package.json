@@ -9,7 +9,9 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "meyer-reset-sass": "^1.0.1",
+    "normalize-scss": "7.0.0"
   },
   "devDependencies": {
     "axios": "^0.16.2",
@@ -44,7 +46,6 @@
     "watch": "webpack --watch",
     "lint": "./node_modules/.bin/eslint ./src"
   },
-//  "precommit": "lint",
   "author": "Santhosh Sundar",
   "license": "MIT"
 }

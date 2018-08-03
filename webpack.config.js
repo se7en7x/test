@@ -42,7 +42,6 @@ module.exports = {
       }
     }
   },
-  devtool: 'inline-source-map',
   plugins: [
     new ExtractTextPlugin("bundle.css"),
     new webpack.DefinePlugin({

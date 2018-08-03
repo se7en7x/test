@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  @include on-event {
+    // color: $text-color;
+    // text-decoration: underline;
+  }
+}
+
+/**
+ * Basic styles for body
+ */
+
+
+//google map hide unwanted stuff
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+label.error {
+  color: #e34f4f;
+  font-size: 14px;
+}
+
+.btn-primary {
+  font-size: 20px;
+    font-family: 'PTSans-Bold';
+    background: #E4C3A6;
+    border: 1px solid #E4C3A6;
+    border-radius: 0;
+    padding: 8px 30px;
+}
+
+.btn-full {
+  width: 100%;
+}

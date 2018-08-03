@@ -1,0 +1,72 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+	color: $text-color;
+	font-family: $text-font-stack;
+	font-weight:normal;
+	white-space: normal;
+	line-height:normal;
+}
+
+h1 {
+	font-size: 42px;
+	font-family: $fontM;
+}
+h2 {
+	font-size: 36px;
+	font-family: $fontM;
+}
+h3 {
+	font-size: 32px;
+	font-family: $fontM;
+}
+h4 {
+	font-size: 28px;
+	font-family: $fontM;
+}
+h5 {
+	font-size: 20px;
+	font-family: $fontM;
+}
+h6 {
+	font-size: 18px;
+	font-family: $fontM;
+}
+p {
+	font-family: $fontP;
+	font-size: 18px;
+}
+
+nav{
+	font-family: $fontP;
+	font-size: 18px;
+	text-align: center;
+	// font-weight: bold;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.brandHeader{
+  &:before{
+    content: " ";
+    display: inline-block;
+    background-color: $ui-normal;
+    width: 6px;
+    height: 0.8em;
+    position: relative;
+    left: -5px;
+  }
+}
+
+.brandHeaderAfter{
+  &:after{
+    content: " ";
+    display: inline-block;
+    background-color: $ui-normal;
+    width: 6px;
+    height: 6px;
+    position: relative;
+    left: 2px;
+  }
+}
