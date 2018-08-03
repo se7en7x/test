@@ -31,7 +31,7 @@ const defaultSearchResult = [
     "woeid": 2459269,
     "latt_long": "40.731972,-74.174179"
   }
-]
+];
 
 export default function reducer(state = defaultSearchResult, action) {
   switch (action.type) {

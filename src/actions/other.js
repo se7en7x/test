@@ -33,4 +33,4 @@ export const receiveLoctions = locations => {
 export const testAction = (testMsg) => ({
   "type": actionTypes.TEST_ACTION,
   testMsg
-})
+});

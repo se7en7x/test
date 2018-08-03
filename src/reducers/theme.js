@@ -2,7 +2,7 @@
 
 const defaultTheme = {
     "color": "blue"
-}
+};
 
 export default function reducer(state = defaultTheme , action) {
   switch (action.type) {

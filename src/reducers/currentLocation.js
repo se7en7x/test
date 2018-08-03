@@ -156,7 +156,7 @@ const defaultLocation = {
   "woeid": 2459269,
   "latt_long": "40.731972,-74.174179",
   "timezone": "America/New_York"
-}
+};
 
 export default function reducer(state = defaultLocation , action) {
   switch (action.type) {
