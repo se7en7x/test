@@ -29,6 +29,14 @@ class DayWeather extends Component {
 		.toFixed(0);
 	};
 
+	dateFormat = applicableDate =>{
+		if (moment(applicableDate, "YYYY-MM-DD").isSame(moment(), "d")){
+			return "Now";
+		}else{
+			return moment(applicableDate, "YYYY-MM-DD").format("ddd");
+		}
+	}
+
 	render() {
 		const { currentLocation } = this.props;
 
@@ -43,7 +51,7 @@ class DayWeather extends Component {
 							{this.tempFormat(r.max_temp)}
 						</span>
 					</li>
-					<li className="date">{moment(r.applicable_date, "YYYY-MM-DD").format("ddd")}</li>
+					<li className="date">{this.dateFormat(r.applicable_date)}</li>
 					<li className="state">{r.weather_state_name}</li>
 				</ul>
 			</li>
