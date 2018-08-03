@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import convert from "convert-units";
 
-class DayWeather extends Component{
-
+class DayWeather extends Component {
 	weatherIco = weatherStateAbbr => {
 		let iconMapping = {
 			sn: "wi-day-snow",
@@ -21,17 +20,26 @@ class DayWeather extends Component{
 		return "wi " + iconMapping[weatherStateAbbr];
 	};
 
-
-	render(){
+	render() {
 		const { currentLocation } = this.props;
 
 		const options = currentLocation.consolidated_weather.map(r => (
 			<li key={r.id}>
-				<ul>
-					<li class={this.weatherIco(r.weather_state_abbr)}></li>
+				<ul className="column">
+					<li class={this.weatherIco(r.weather_state_abbr)} />
 					<li>
-						<span>{convert(r.min_temp).from("C").to("F").toFixed(0)}</span>
-						<span>{convert(r.max_temp).from("C").to("F").toFixed(0)}</span>
+						<span>
+							{convert(r.min_temp)
+								.from("C")
+								.to("F")
+								.toFixed(0)}
+						</span>
+						<span>
+							{convert(r.max_temp)
+								.from("C")
+								.to("F")
+								.toFixed(0)}
+						</span>
 					</li>
 					<li>{r.applicable_date}</li>
 					<li>{r.weather_state_name}</li>
@@ -39,15 +47,12 @@ class DayWeather extends Component{
 			</li>
 		));
 
-		return(
+		return (
 			<div className="weather">
-				<ul>{options}</ul>
+				<ul class="weatherList">{options}</ul>
 			</div>
-
-		)
-	};
-
-
-};
+		);
+	}
+}
 
 export default DayWeather;

@@ -2,11 +2,14 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-.homemain {
 
-}
 $sidemenu-color: rgba(255, 244, 244, 0.7);
 
+
+
+$small: (0px, 500px);
+$medium: (600px, 800px);
+$big: (800px, 1000px);
 
 
 body {
@@ -77,13 +80,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    ul{
+    .weatherList{
       width:auto;
+      display: flex;
+      flex-direction:column;
+      @include respond-to('medium') {
+	    flex-direction:row;
+	  }
       li{
-        line-height:100px;
+        line-height:50px;
         color:white;
         font-size: 20px;
-        text-align: center
+        text-align: center;
+        width: 125px;
       }
     }
 }
