@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class Search extends Component {
 	constructor(props) {
 		super(props);
-	}
+	};
 	state = { searchInput: this.props.searchTerm };
 	handleOnChange = event => {
 		this.setState({
@@ -58,11 +58,12 @@ class Search extends Component {
 			</div>
 		);
 	}
-}
+};
 
 Search.propTypes = {
 	fetchLoctions: PropTypes.func.isRequired,
 	selectLocation: PropTypes.func.isRequired,
+
 	searchTerm: PropTypes.string
 };
 

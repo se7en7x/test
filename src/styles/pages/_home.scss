@@ -5,3 +5,85 @@
 .homemain {
 
 }
+$sidemenu-color: rgba(255, 244, 244, 0.7);
+
+
+
+body {
+  background: #c64c4c;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+}
+
+.close{
+  > button {
+    display:block;
+  }
+  .search{
+    display:none;
+  }
+}
+
+.open{
+  height:100%;
+  width:250px;
+  position:fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: $sidemenu-color;
+  overflow-x:hidden;
+  transition:0.5s;
+
+
+  >button{
+    display: none;
+  }
+  .search{
+    form{
+      font-size:20px;
+      margin: 20px 10px;
+      color:black;
+      span{
+        color:black;
+      }
+      input{
+       border: azure;
+        margin: 15px 0px;
+        font-style: italic;
+        background: transparent;
+        border-bottom: 1px solid #b11919;
+        font-size: 15px;
+      }
+      ul{
+        font-size: 15px;
+        font-style: italic;
+      }
+    }
+  }
+
+
+}
+
+.weather{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+      width:auto;
+      li{
+        line-height:100px;
+        color:white;
+        font-size: 20px;
+        text-align: center
+      }
+    }
+}

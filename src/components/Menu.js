@@ -5,7 +5,7 @@ import Search from "../containers/Search";
 
 class Menu extends Component {
 	render() {
-		const { isMenuOpen } = this.props;
+		const { isMenuOpen, toggleMenu } = this.props;
 
 		return (
 			<div className={isMenuOpen ? "menu open" : "menu close"}>
@@ -20,7 +20,7 @@ class Menu extends Component {
 			</div>
 		);
 	}
-}
+};
 
 Menu.propTypes = {
 	toggleMenu: PropTypes.func.isRequired
