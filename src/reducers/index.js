@@ -1,7 +1,6 @@
 // This will can combine one or more Reducer functions and export it through Redux's combineReducer helper.
 import { combineReducers } from "redux";
 
-import count from "./counter";
 import theme from "./theme";
 import currentLocation from "./currentLocation";
 import searchTerm from "./searchTerm";
@@ -11,4 +10,4 @@ import woeid from "./woeid";
 
 
 
-export default combineReducers({ count, theme, currentLocation,searchTerm,searchResult,isMenuOpen,woeid});
+export default combineReducers({theme, currentLocation,searchTerm,searchResult,isMenuOpen,woeid});
