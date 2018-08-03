@@ -9,13 +9,18 @@ class Menu extends Component {
 
 		return (
 			<div className={isMenuOpen ? "menu open" : "menu close"}>
-				<button
+				<i className = "menuBtn fas fa-bars"
 					onClick={() => {
 						toggleMenu();
 					}}
 				>
-					Menu
-				</button>
+				</i>
+				<i className="closeBtn far fa-times"
+					onClick={() => {
+						toggleMenu();
+					}}
+
+				></i>
 				<Search />
 			</div>
 		);

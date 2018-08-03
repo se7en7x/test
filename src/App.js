@@ -6,7 +6,7 @@ import DayWeather from "./containers/DayWeather"
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className="main">
 				<Menu />
 				<DayWeather />
 			</div>
