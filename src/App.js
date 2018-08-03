@@ -7,11 +7,12 @@ import ThemeSelector from "./containers/ThemeSelector";
 import LocationInfo from  "./components/LocationInfo"
 
 
+
 class App extends Component {
 	render() {
 		const { theme,currentLocation} = this.props;
 		return (
-			<div className="main" class={theme} >
+			<div  className={`main ${theme}`} >
 				<Menu />
 				<DayWeather currentLocation={currentLocation} />
 				<ThemeSelector />

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import Search from "../containers/Search";
+import ThemeSelector from "../containers/ThemeSelector";
 
 class Menu extends Component {
 	render() {
@@ -22,6 +23,7 @@ class Menu extends Component {
 
 				></i>
 				<Search />
+				<ThemeSelector />
 			</div>
 		);
 	}
