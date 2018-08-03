@@ -1,7 +1,9 @@
+import * as actionTypes from "../constants/actionTypes";
+
 export default function reducer(state = "New York", action) {
   switch (action.type) {
-  // case INCREMENT_NUM: 
-  //   return state + 1;
+   case actionTypes.FETCH_LOCATIONS: 
+     return action.searchTerm;
   // case DECREMENT_NUM:
   //   return state - 1;
   // case RESET:

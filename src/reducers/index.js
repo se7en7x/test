@@ -7,6 +7,8 @@ import currentLocation from "./currentLocation";
 import searchTerm from "./searchTerm";
 import searchResult from "./searchResult";
 import isMenuOpen from "./menu";
+import woeid from "./woeid";
 
 
-export default combineReducers({ count, theme, currentLocation,searchTerm,searchResult,isMenuOpen});
+
+export default combineReducers({ count, theme, currentLocation,searchTerm,searchResult,isMenuOpen,woeid});

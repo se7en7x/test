@@ -1,3 +1,5 @@
+import {RECEIVE_WEATHER} from "../constants/ActionTypes";
+
 const defaultLocation = {
   "consolidated_weather": [
     {
@@ -160,13 +162,8 @@ const defaultLocation = {
 
 export default function reducer(state = defaultLocation , action) {
   switch (action.type) {
-  // case INCREMENT_NUM: 
-  //   return state + 1;
-  // case DECREMENT_NUM:
-  //   return state - 1;
-  // case RESET:
-  //   return state = action.payload;
+    case RECEIVE_WEATHER: 
+     return action.location;
   }
-
   return state;
 }
