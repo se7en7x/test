@@ -1,4 +1,4 @@
-import * as actionTypes from "../constants/actionTypes";
+import * as actionTypes from "../constants/ActionTypes";
 
 export default function reducer(state = "New York", action) {
   switch (action.type) {

@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Controls from "../containers/Controls";
 
- class Counter extends Component {
+class Counter extends Component {
   render() {
-
     const { count } = this.props;
 
     return (
@@ -13,7 +12,9 @@ import Controls from "../containers/Controls";
         <Controls />
         <hr />
         <span>
-          <a href='https://github.com/Gigacore/React-Redux-Starter'>Fork it on Github</a>
+          <a href="https://github.com/Gigacore/React-Redux-Starter">
+            Fork it on Github
+          </a>
         </span>
       </div>
     );

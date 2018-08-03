@@ -4,6 +4,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: ["./src/index.js", "./src/styles/main.scss"],
+  devtool: 'inline-source-map',
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./public/dist")
@@ -41,11 +42,13 @@ module.exports = {
       }
     }
   },
+  devtool: 'inline-source-map',
   plugins: [
     new ExtractTextPlugin("bundle.css"),
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("dev")
+      "process.env.NODE_ENV": JSON.stringify("production")
     }),
     new webpack.optimize.UglifyJsPlugin()
   ]
 };
+
