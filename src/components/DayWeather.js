@@ -11,12 +11,12 @@ class DayWeather extends Component{
 
 		const options = currentLocation.consolidated_weather.map(r => (
 			<li key={r.id}>
-				<ul>
+				<ul className="column">
 					<li>{r.weather_state_abbr}</li>
 					<li>
-						<span>{r.max_temp}</span>
-						<span>{r.min_temp}</span>
-					</li>
+						<span>77</span>
+						<span>89</span>
+					</li> 
 					<li>{r.applicable_date}</li>
 					<li>{r.weather_state_name}</li>
 				</ul>			
@@ -25,7 +25,7 @@ class DayWeather extends Component{
 
 		return(
 			<div className="weather">
-				<ul>{options}</ul>
+				<ul class="weatherList">{options}</ul>
 			</div>
 
 		)
