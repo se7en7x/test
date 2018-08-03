@@ -1,5 +1,5 @@
 import * as actionTypes from "../constants/actionTypes";
-import axios from 'axios';
+import axios from "axios";
 
 export const fetchLoctions = searchTerm => {
 	return dispatch => {
@@ -7,10 +7,9 @@ export const fetchLoctions = searchTerm => {
 			// .get("https://www.metaweather.com/api/location/search/?query="+searchTerm)
 			.get("/api/location/search/?query="+searchTerm)
 			.then(function(response) {
-												console.log("done");
-
-				console.log(response);
-				dispatch(receiveLoctions(response.header));
+				console.log("done");
+				console.log(response.data);
+				dispatch(receiveLoctions(response.data));
 			})
 			.catch(function(error) {
 				// console.log(error.data);
@@ -23,7 +22,7 @@ export const fetchLoctions = searchTerm => {
 export const receiveLoctions = locations => {
 	return dispatch => {
 		return dispatch({
-			type: actionTypes.RECEIVE_LOCATIONS,
+			"type": actionTypes.RECEIVE_LOCATIONS,
 			locations
 		});
 	};
@@ -32,6 +31,6 @@ export const receiveLoctions = locations => {
 
 
 export const testAction = (testMsg) => ({
-  type: actionTypes.TEST_ACTION,
+  "type": actionTypes.TEST_ACTION,
   testMsg
 })

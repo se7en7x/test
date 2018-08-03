@@ -19,5 +19,7 @@ export const RECEIVE_WEATHER = "RECEIVE_WEATHER";
 
 export const SELECT_THEME = "SELECT_THEME";
 
+export const TOGGLE_MENU= "TOGGLE_MENU";
+
 export const TEST_ACTION = "TEST_ACTION";
 /* eslint-enable */
