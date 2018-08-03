@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import convert from "convert-units";
 
 class DayWeather extends Component{
 
@@ -16,6 +17,7 @@ class DayWeather extends Component{
 			lc: "wi-day-sunny-overcast",
 			c: "wi-day-sunny"
 		};
+		console.log();
 		return "wi " + iconMapping[weatherStateAbbr];
 	};
 
@@ -28,8 +30,8 @@ class DayWeather extends Component{
 				<ul>
 					<li class={this.weatherIco(r.weather_state_abbr)}></li>
 					<li>
-						<span>{r.max_temp}</span>
-						<span>{r.min_temp}</span>
+						<span>{convert(r.min_temp).from("C").to("F").toFixed(0)}</span>
+						<span>{convert(r.max_temp).from("C").to("F").toFixed(0)}</span>
 					</li>
 					<li>{r.applicable_date}</li>
 					<li>{r.weather_state_name}</li>
