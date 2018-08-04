@@ -8,16 +8,14 @@ export const fetchLoctions = searchTerm => {
 			searchTerm
 		});
 		axios
-			// .get("https://www.metaweather.com/api/location/search/?query="+searchTerm)
 			.get("/api/location/search/?query="+searchTerm)
 			.then(function(response) {
-				console.log("done");
+				//console.log("done");
 				console.log(response.data);
 				dispatch(receiveLoctions(response.data));
 			})
 			.catch(function(error) {
-				// console.log(error.data);
-								console.log(error);
+				console.log(error);
 
 			});
 	};
@@ -50,7 +48,6 @@ export const selectLocation = (woeid,city) => {
 export const fetchWeather = woeid => {
 	return dispatch => {
 		axios
-			// .get("https://www.metaweather.com/api/location/search/?query="+searchTerm)
 			.get("/api/location/"+woeid+"/")
 			.then(function(response) {
 				console.log("done2222");
@@ -84,7 +81,3 @@ export const selectTheme = theme => {
 	};
 };
 
-export const testAction = (testMsg) => ({
-  "type": actionTypes.TEST_ACTION,
-  testMsg
-});

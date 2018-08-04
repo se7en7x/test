@@ -3,21 +3,7 @@
 // -----------------------------------------------------------------------------
 
 
-$sidemenu-color: rgba(255, 244, 244, 0.7);
 
-
-
-$small: (0px, 500px);
-$medium: (600px, 800px);
-$big: (800px, 1000px);
-
-
-body {
-  background: #c64c4c;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 36px;
-}
 
 .main{
 	display: flex;
@@ -26,6 +12,7 @@ body {
     min-height: 100vh;
     .menu{
     	align-self: flex-start;
+      flex: 1;
     }
 }
 
@@ -56,11 +43,12 @@ body {
 
   .closeBtn{
     display: block;
-    color: black;
-    font-size: 30px;
+    color: #ae9a9a;
+    font-size: 25px;
     position: absolute;
     left: 220px;
     right: 0px;
+    top: 10px;
   }
 
   >.menuBtn{
@@ -92,45 +80,3 @@ body {
 
 }
 
-.weather{
-
-    .weatherList{
-      width:auto;
-      display: flex;
-      flex-direction:column;
-      @include respond-to('medium') {
-	    flex-direction:row;
-	  }
-      .weatherItem{
-        line-height:50px;
-        color:white;
-        font-size: 20px;
-        text-align: center;
-        width: 125px;
-        .wi{
-        	font-size: 30px;
-        }
-        .temp{
-        	span:first-child{
-        		font-size: 25px;
-    			padding-right: 10%;
-        	}
-        	span:nth-child(2){
-        		color: #ffffff6b;
-        	}
-        }
-        .date{
-    		color: #ffffff6b;
-        }
-        .state{
-			font-size: 17px;
-			color: #ffffff6b;
-        }
-        &:first-child{
-        	.wi{
-				font-size:100px;
-        	}
-        };
-      }
-    }
-}

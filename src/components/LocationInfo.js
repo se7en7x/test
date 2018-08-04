@@ -6,8 +6,8 @@ class LocationInfo extends Component {
 		const { city, state } = this.props;
 		if (city || state) {
 			return (
-				<div>
-					{city},{state}
+				<div className="cityInfo">
+					<div>{city},{state}</div>
 				</div>
 			);
 		} else {

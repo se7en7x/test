@@ -18,7 +18,6 @@ class DayWeather extends Component {
 			lc: "wi-day-sunny-overcast",
 			c: "wi-day-sunny"
 		};
-		console.log();
 		return "wi " + iconMapping[weatherStateAbbr];
 	};
 
